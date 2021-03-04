@@ -1,6 +1,6 @@
 ///
 /// Hyperspace by HTML5 UP
-/// html5up.net | @n33co
+/// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
@@ -14,15 +14,15 @@
 			max-width: 100%;
 			width: _size(inner-width);
 
-			@include breakpoint(xlarge) {
+			@include breakpoint('<=xlarge') {
 				@include padding(4em, 4em);
 			}
 
-			@include breakpoint(large) {
+			@include breakpoint('<=large') {
 				width: 100%;
 			}
 
-			@include breakpoint(small) {
+			@include breakpoint('<=small') {
 				@include padding(3em, 2em);
 			}
 		}
@@ -65,7 +65,7 @@
 				height: 100vh;
 			}
 
-			@include breakpoint(large) {
+			@include breakpoint('<=large') {
 				min-height: calc(100vh - 2.5em);
 
 				body.is-ie & {
@@ -73,7 +73,7 @@
 				}
 			}
 
-			@include breakpoint(small) {
+			@include breakpoint('<=small') {
 				padding: 2em 0;
 				min-height: 0;
 
@@ -94,7 +94,7 @@
 			}
 
 			&.inactive,
-			body.is-loading & {
+			body.is-preload & {
 				> .inner {
 					opacity: 0;
 					@include vendor('transform', 'translateY(1em)');
@@ -113,7 +113,7 @@
 			}
 
 			&.inactive,
-			body.is-loading & {
+			body.is-preload & {
 				> .inner {
 					opacity: 0;
 					@include vendor('transform', 'translateY(-1em)');
@@ -130,7 +130,7 @@
 			}
 
 			&.inactive,
-			body.is-loading & {
+			body.is-preload & {
 				> .inner {
 					opacity: 0;
 				}

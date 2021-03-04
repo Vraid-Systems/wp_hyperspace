@@ -1,13 +1,13 @@
 <?php
 get_header();
 
-$section_groups = HyperspaceWP::get_ordered_home_page_section_groups();
+$section_groups = wp_hyperspace::get_ordered_home_page_section_groups();
 ?>
 
 <!-- Header -->
 <header id="header">
     <a href="/" class="title"><?php echo get_bloginfo ('name');?></a>
-    <?php echo HyperspaceWP::create_nav_list($section_groups, false); ?>
+    <?php echo wp_hyperspace::create_nav_list($section_groups, false); ?>
 </header>
 
 <!-- Wrapper -->

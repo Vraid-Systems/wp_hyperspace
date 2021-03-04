@@ -1,21 +1,33 @@
-<?php $template_dir = get_template_directory_uri(); ?>
-</div>
+<?php
+$template_dir = get_template_directory_uri();
+?>
 
-<!-- Footer -->
-<footer id="footer" class="wrapper style1-alt">
-    <div class="inner">
-<!--        <ul class="menu">-->
-<!--            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
-<!--        </ul>-->
-        <ul class="menu"><li>
-                <?php dynamic_sidebar(__( 'Footer widget', HyperspaceWP::type_name )); ?>
-        <li></ul>
-    </div>
-</footer>
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>
+                    <?php dynamic_sidebar(__( 'Footer widget', wp_hyperspace::type_name )); ?>
+                </li>
+                <li>
+                    Design: <a href="http://html5up.net">HTML5 UP</a>
+                </li>
+                <li>
+                    Images: <a href="https://unsplash.com/@wolfgang_hasselmann">Wolfgang</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
-<!-- Scripts -->
-<!--[if lte IE 8]><script src="<?php echo $template_dir; ?>/assets/js/ie/respond.min.js"></script><![endif]-->
-<?php wp_footer(); ?>
+    <script src="<?php echo $template_dir; ?>/assets/js/jquery.min.js"></script>
+    <script src="<?php echo $template_dir; ?>/assets/js/jquery.scrollex.min.js"></script>
+    <script src="<?php echo $template_dir; ?>/assets/js/jquery.scrolly.min.js"></script>
+    <script src="<?php echo $template_dir; ?>/assets/js/browser.min.js"></script>
+    <script src="<?php echo $template_dir; ?>/assets/js/breakpoints.min.js"></script>
+    <script src="<?php echo $template_dir; ?>/assets/js/util.js"></script>
+    <script src="<?php echo $template_dir; ?>/assets/js/main.js"></script>
 
-</body>
+    <?php wp_footer(); ?>
+
+    </body>
+
 </html>

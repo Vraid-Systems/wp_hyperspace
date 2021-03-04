@@ -1,6 +1,6 @@
 <?php
 
-class HyperspaceWP
+class wp_hyperspace
 {
     const type_name  = 'home_page_section';
     const nonce_name = 'home_page_section_nonce';
@@ -56,7 +56,7 @@ class HyperspaceWP
         add_meta_box(
             'home_page_section_settings',
             'Page Section settings',
-            'HyperspaceWP::meta_box_content',
+            'wp_hyperspace::meta_box_content',
             self::type_name,
             'normal',
             'high',
@@ -155,7 +155,7 @@ class HyperspaceWP
                 'page-attributes',
             ),
             'rewrite' => array('slug'=>'section'),
-            'register_meta_box_cb' => 'HyperspaceWP::register_meta_boxes',
+            'register_meta_box_cb' => 'wp_hyperspace::register_meta_boxes',
             'has_archive' => true,
             //'query_var' => false,
         );
@@ -362,15 +362,15 @@ class HyperspaceWP
 
     public static function init() {
         self::register_home_page_section_post_type();
-        add_action( 'add_meta_boxes_' . self::type_name, 'HyperspaceWP::register_meta_boxes' );
-        add_action( 'save_post', 'HyperspaceWP::save_meta_box_content' );
+        add_action( 'add_meta_boxes_' . self::type_name, 'wp_hyperspace::register_meta_boxes' );
+        add_action( 'save_post', 'wp_hyperspace::save_meta_box_content' );
         //add_action( 'save_post', )
     }
 
     public static function after_theme_setup() {
         add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 438, 438, true );
-        add_shortcode( 'wphyperspace_templatedir', 'HyperspaceWP::get_template_dir' );
+        add_shortcode( 'wphyperspace_templatedir', 'wp_hyperspace::get_template_dir' );
     }
 
     public static function enqueue_scripts() {
@@ -386,9 +386,9 @@ class HyperspaceWP
         if ( is_child_theme() ) {
             wp_register_style( 'parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css', array('hyperspace-main') );
         }
-        wp_register_style( 'hyperspaceWP-style', get_stylesheet_uri(), array('hyperspace-main', 'parent-style') );
+        wp_register_style( 'wp_hyperspace-style', get_stylesheet_uri(), array('hyperspace-main', 'parent-style') );
 
-        wp_enqueue_style('hyperspaceWP-style');
+        wp_enqueue_style('wp_hyperspace-style');
     }
 
     public static function register_widgets() {
@@ -429,10 +429,10 @@ class HyperspaceWP
         }
     }
 }
-add_action( 'init',               'HyperspaceWP::init' );
-add_action( 'widgets_init',       'HyperspaceWP::register_widgets' );
-add_action( 'after_setup_theme',  'HyperspaceWP::after_theme_setup' );
-add_action( 'wp_enqueue_scripts', 'HyperspaceWP::enqueue_scripts' );
+add_action( 'init',               'wp_hyperspace::init' );
+add_action( 'widgets_init',       'wp_hyperspace::register_widgets' );
+add_action( 'after_setup_theme',  'wp_hyperspace::after_theme_setup' );
+add_action( 'wp_enqueue_scripts', 'wp_hyperspace::enqueue_scripts' );
 
 
 

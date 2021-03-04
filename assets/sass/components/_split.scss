@@ -1,6 +1,6 @@
 ///
 /// Hyperspace by HTML5 UP
-/// html5up.net | @n33co
+/// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
@@ -32,7 +32,7 @@
 			}
 		}
 
-		@include breakpoint(xlarge) {
+		@include breakpoint('<=xlarge') {
 			> * {
 				width: calc(50% - 2em);
 			}
@@ -56,7 +56,7 @@
 			}
 		}
 
-		@include breakpoint(medium) {
+		@include breakpoint('<=medium') {
 			display: block;
 
 			> * {
@@ -82,7 +82,7 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include breakpoint('<=small') {
 			> * {
 				margin: 3em 0 0 0;
 				padding: 3em 0 0 0;
