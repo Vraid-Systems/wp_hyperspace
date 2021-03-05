@@ -1,6 +1,6 @@
 ///
 /// Hyperspace by HTML5 UP
-/// html5up.net | @n33co
+/// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
@@ -115,7 +115,7 @@
 			}
 		}
 
-		body.is-loading & {
+		body.is-preload & {
 			> .inner {
 				opacity: 0;
 			}
@@ -130,7 +130,7 @@
 			}
 		}
 
-		@include breakpoint(large) {
+		@include breakpoint('<=large') {
 			height: _size(sidebar-height);
 			left: 0;
 			line-height: _size(sidebar-height);
@@ -179,7 +179,7 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		@include breakpoint('<=small') {
 			display: none;
 		}
 	}

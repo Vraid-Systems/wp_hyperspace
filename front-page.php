@@ -1,5 +1,5 @@
 <?php
 /*
-Template Name: WP Hyperspace Front page
+Template Name: Hyperspace Front page
 */
 require_once('home.php');

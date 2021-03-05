@@ -1,19 +1,17 @@
 <?php
 get_header();
 
-$section_groups = HyperspaceWP::get_ordered_home_page_section_groups();
+$section_groups = wp_hyperspace::get_ordered_home_page_section_groups();
 ?>
 
-<!-- Header -->
-<header id="header">
-    <a href="/" class="title"><?php echo get_bloginfo ('name');?></a>
-    <?php echo HyperspaceWP::create_nav_list($section_groups, false); ?>
-</header>
+<section id="sidebar">
+    <div class="inner">
+        <?php echo wp_hyperspace::create_nav_list($section_groups, true); ?>
+    </div>
+</section>
 
-<!-- Wrapper -->
 <div id="wrapper">
 
-    <!-- Main -->
     <section id="main" class="wrapper">
         <div class="inner">
         <?php
@@ -39,10 +37,10 @@ $section_groups = HyperspaceWP::get_ordered_home_page_section_groups();
             the_content();
 
         endwhile;
-
         ?>
         </div>
     </section>
 
 </div>
+
 <?php get_footer(); ?>
