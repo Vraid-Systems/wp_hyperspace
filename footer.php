@@ -4,17 +4,7 @@ $template_dir = get_template_directory_uri();
 
     <footer id="footer" class="wrapper style1-alt">
         <div class="inner">
-            <ul class="menu">
-                <li>
-                    <?php dynamic_sidebar(__( 'Footer widget', wp_hyperspace::type_name )); ?>
-                </li>
-                <li>
-                    Design: <a href="http://html5up.net">HTML5 UP</a>
-                </li>
-                <li>
-                    Images: <a href="https://unsplash.com/@wolfgang_hasselmann">Wolfgang</a>
-                </li>
-            </ul>
+            <?php dynamic_sidebar(__( 'Footer widget', wp_hyperspace::type_name )); ?>
         </div>
     </footer>
 
