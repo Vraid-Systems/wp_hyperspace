@@ -6,13 +6,13 @@ $section_groups = wp_hyperspace::get_ordered_home_page_section_groups();
 
 <section id="sidebar">
     <div class="inner">
-        <?php echo wp_hyperspace::create_nav_list($section_groups, true); ?>
+        <?php echo wp_hyperspace::create_nav_list($section_groups, false); ?>
     </div>
 </section>
 
 <div id="wrapper">
 
-    <section id="main" class="wrapper">
+    <section id="main" class="wrapper style2 fade-up">
         <div class="inner">
             <?php
             // Start the Loop.

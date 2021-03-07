@@ -3,7 +3,7 @@
 $blog_title = get_bloginfo('name');
 $template_dir = get_template_directory_uri();
 ?>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,5 +13,8 @@ $template_dir = get_template_directory_uri();
 
     <link href="<?php echo $template_dir; ?>/assets/css/main.css" rel="stylesheet" />
     <noscript><link rel="stylesheet" href="<?php echo $template_dir; ?>/assets/css/noscript.css" /></noscript>
+
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
